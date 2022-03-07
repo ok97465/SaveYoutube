@@ -28,7 +28,9 @@ def save_caption(yt: YouTube, path_base: str):
     elif "a.en" in yt.captions:
         caption_code = "a.en"
     else:
-        print("Could not found caption")
+        print(f"Captions is {yt.captions}")
+        print("Could not found english caption")
+        return
 
     caption = yt.captions[caption_code]
     try:
